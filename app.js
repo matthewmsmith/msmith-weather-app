@@ -2,7 +2,7 @@ let wrapper = document.querySelector(".wrapper");
 
 const locationName = document.querySelector(".location-name");
 
-const icon = document.querySelector("#weather-icon");
+const icons = document.querySelector(".weather");
 const temperatureDescription = document.querySelector(
   ".temperature-description"
 );
@@ -30,17 +30,21 @@ window.addEventListener("load", () => {
         .then((data) => {
           const name = data.name;
           const { temp } = data.main;
-          const {id, description } = data.weather[0];
+          let {id, description } = data.weather[0];
           let {icon} = data.weather[0]
+
+          
           locationName.textContent = name;
           degree.textContent = (Math.round(temp - 273.15) * 9) / 5 + 32;
           temperatureDescription.textContent = description;
-          changeBackgroundColor(id, icon);
-
+          icons.textContent = icon;
+          changeBackgroundColor(id);
           console.log(data);
         });
+      
     });
   }
+ 
 });
 
 button.addEventListener('click', () => {
@@ -54,40 +58,43 @@ button.addEventListener('click', () => {
           const name = data.name;
           const { temp } = data.main;
           const {description } = data.weather[0];
-          const {id} = data.weather[0]
+          let {id} = data.weather[0]
           let {icon} = data.weather[0]
+
+          icons.textContent = icon;
           locationName.textContent = name;
           degree.textContent = (Math.round(temp - 273.15) * 9) / 5 + 32;
           temperatureDescription.textContent = description;
-          changeBackgroundColor(id, icon);
+          
+          changeBackgroundColor(id);
          
         })
-      
+    
       });
 
       function changeBackgroundColor(id) {
         if (id < 250) {
-          icon.src = "./icons/thunderstorm.svg";
+          icons.src = "./icons/thunderstorm.svg";
           wrapper.style.background =
             "linear-gradient(rgba(82, 50, 134, 0.993), rgb(129, 106, 150), rgba(0, 0, 0, 0.849))";
         } else if (id < 350) {
-          icon.src = "./icons/drizzle.svg";
+          icons.src = "./icons/drizzle.svg";
           wrapper.style.background =
             "linear-gradient(rgb(15, 18, 29), rgb(201, 198, 198), rgb(50, 49, 53, 0.849))";
         } else if (id < 550) {
-          icon.src = "./icons/rain.svg";
+           icons.src = "./icons/rain.svg";
           wrapper.style.background =
             "linear-gradient(rgb(15, 18, 29), rgb(201, 198, 198), rgb(50, 49, 53, 0.849))";
         } else if (id < 650) {
-          icon.src = "./icons/snow.svg";
+          icons.src = "./icons/snow.svg";
           wrapper.style.background =
             "linear-gradient( rgb(245, 244, 244), rgb(201, 198, 198), rgb(245, 243, 243))";
         } else if (id === 800) {
-          icon.src = "./icons/clear.svg";
+          icons.src = "./icons/clear.svg";
           wrapper.style.background =
             "linear-gradient(rgb(72, 140, 218), rgb(31, 95, 235), rgb(255, 255, 255))";
         } else if (id === 802) {
-          icon.src = "./icons/clouds.svg";
+          icons.src = "./icons/clouds.svg";
           wrapper.style.background =
             "linear-gradient(rgb(90, 89, 89), rgb(158, 154, 154), rgb(185, 185, 185))";
         }
