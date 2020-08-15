@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Weather App</title>
 </head>
@@ -12,25 +12,26 @@
 
    
 
-    <div class="temperature">  
-        <div class="location">
-            <h1 class='location-timezone'>Timezone</h1>
+    <div class="wrapper">  
+        <div class="location-name-wrapper">
+            <h1 class='location-name'>Timezone</h1>
         </div>
-        <div class="temp-icon-des">
+        <div class="icon-description-wrapper">
            <img id='weather-icon' class='weather' src='./icons/clear.svg' alt='sunny'></img>  
            <div class="temperature-description">Its cold</div>
         </div>
-       <div class="degree-section">
-           <h2 class='temperature-degree'>34</h2>
+       <div class="degree-wrapper">
+           <h2 class='degree'>34</h2>
         <span>&deg;</span>
     </div> 
-   </div>
-
-    <div class="temperature-input">
-     <!--  <input type='text' class='temperature-input-value'>
-        <input type='submit' value='submit' class='button'>-->
+    <div class="location-wrapper">
+        <input type='text' class='location-input' placeholder="Enter a location">
+        <input type='submit' value='submit' class='location-submit'>
     </div>
 
+   </div>
+
+   
 
 
 

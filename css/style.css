@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -6,50 +5,66 @@
 }
 
 body {
-  letter-spacing: .4em;
+  letter-spacing: 0.5em;
   color: white;
-   max-width: 100%;
-   height: 100vh;
-  font-family: 'Montserrat', sans-serif;
- background: linear-gradient( rgba(82, 50, 134, 0.993), rgb(129, 106, 150), rgba(0, 0, 0, 0.849));
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(
+    rgba(82, 50, 134, 0.993),
+    rgb(129, 106, 150),
+    rgba(0, 0, 0, 0.849)
+  );
 }
 h2 {
-  font-size: 1.3em;
+  font-size: 2em;
 }
 
 span {
-  padding: 0.2em;
   font-size: 1.4em;
 }
-
-.location-timezone {
- display: flex;
- justify-content: center;
- padding-top: .4em;
-}
-.temperature{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-height: 100vh;
-width: 100%;
-
-
-}
-
-.temp-icon-des {
+.wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5em;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0 1em;
 }
-.degree-section {
+.location-name-wrapper {
+  font-size: 2em;
+  text-align: center;
+}
+
+.icon-description-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+.degree-wrapper {
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
   font-size: 2.5em;
+  padding: .3em;
+}
 
-  
+.location-input {
+  height: 3em;
+  width: 20em;
+  border-radius: 0.4em;
+  letter-spacing: .14em;
+  font-weight: bold;
+  padding-left: 1em;
+}
+.location-submit {
+  border-radius: 0.4em;
+  height: 3em;
+  width: 7em;
+  letter-spacing: 0.14em;
+  font-weight: bold;
+}
+.location-submit:hover {
+  background-color: rgb(223, 221, 221);
 }
