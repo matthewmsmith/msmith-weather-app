@@ -14,8 +14,13 @@ body {
     rgba(0, 0, 0, 0.849)
   );
 }
-h2 {
-  font-size: 2em;
+h1 {
+  font-size: 1em;
+  padding-bottom: .5em;
+}
+img {
+  padding-bottom: 0;
+  width: 200px;
 }
 
 span {
@@ -28,19 +33,14 @@ span {
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  padding: 0 1em;
+  padding: 0 .1em;
 }
 .location-name-wrapper {
   font-size: 2em;
   text-align: center;
 }
 
-.icon-description-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1em;
-}
+
 .degree-wrapper {
   display: flex;
   justify-content: center;
